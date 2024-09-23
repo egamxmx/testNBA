@@ -49,7 +49,7 @@ for season1 in tqdm(season):
                 continue
             if month1 in [4, 6, 9, 11] and day1 > 30:
                 continue
-            if month1 == 2 and day1 > 28:
+            if month1 == 2 and day1 > 29:
                 continue
             if end_year_pointer == datetime.now().year:
                 if month1 == datetime.now().month and day1 > datetime.now().day:

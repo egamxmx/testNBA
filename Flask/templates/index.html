@@ -20,9 +20,9 @@
       <table role="grid">
       <thead>
           <th>Teams</th>
-          <th>Fanduel</th>
-          <th>Draftkings</th>
-          <th>Betmgm</th>
+          <th>I</th>
+          <th>II</th>
+          <th>III</th>
       </thead>
         <tbody>
         <tr>
@@ -85,11 +85,17 @@
             var r, g, b = 0;
             if (perc < 50) {
                 r = 255;
-                g = Math.round(5.1 * perc);
+				g = 0;
+                //g = Math.round(2.1 * perc);
+            }
+			else if (perc > 50 && perc < 69) {
+                r = 255;
+				g = 254;
+                //g = Math.round(3.1 * perc);
             }
             else {
                 g = 255;
-                r = Math.round(510 - 5.10 * perc);
+                r = Math.round(210 - 2.10 * perc);
             }
             var h = r * 0x10000 + g * 0x100 + b * 0x1;
             return '#' + ('000000' + h.toString(16)).slice(-6);
