@@ -16,7 +16,6 @@ con = sqlite3.connect("../../Data/TeamData.sqlite")
 
 # Función para obtener la última fecha almacenada en la base de datos
 def obtener_ultima_fecha():
-    # Obtener la última fecha almacenada en la base de datos
     cursor = con.cursor()
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name DESC LIMIT 1;")
     result = cursor.fetchone()
